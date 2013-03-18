@@ -2,7 +2,7 @@
 
   <camelContext id="rider-auto-normalizer" trace="false" xmlns="http://camel.apache.org/schema/blueprint">
     <route id="normalize-message-data">
-      <from uri="jms:incomingOrders" />      
+      <from uri="activemq:incomingOrders" />
       <choice>
         <when>
           <simple>${header.CamelFileName} regex '^.*xml$'</simple>
@@ -18,15 +18,15 @@
           <convertBodyTo type="org.fusesource.camel.model.Order"/>
         </when>
       </choice>            
-      <to uri="jms:orders" />
+      <to uri="activemq:orders" />
     </route>
   </camelContext>
 
-  <!-- use CF from ActiveMQ blueprint service running in container -->
-  <reference id="connectionFactory" interface="javax.jms.ConnectionFactory" 
-    filter="(name=localhost)" />
-  <bean id="jms" class="org.apache.activemq.camel.component.ActiveMQComponent">
-    <property name="connectionFactory" ref="connectionFactory" />
-  </bean>
+    <!-- Set username and password to values you set in etc/user.properties -->
+    <bean id="activemq" class="org.apache.activemq.camel.component.ActiveMQComponent" >
+        <property name="brokerURL" value="tcp://localhost:61616"/>
+        <property name="userName" value="smx"/>
+        <property name="password" value="smx"/>
+    </bean>
 
 </blueprint>
