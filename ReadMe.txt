@@ -28,8 +28,8 @@ Setup
     - Follow the instructions at: 
       http://fusesource.com/docs/ide/2.0/install_guide/front.html
 
-- Install Fuse ESB / ServiceMix 4.4.1-fuse-00-08
-  - Download from http://fusesource.com/downloads/ and extract
+- Install JBoss Fuse  6.0.0
+    - Download from https://access.redhat.com/jbossnetwork/ (registration required) and extract
 
 Build & Run
 ==============================
@@ -38,31 +38,31 @@ Build & Run
 
 <project home> $ mvn clean install
 
-2) Start Fuse ESB
+2) Start JBoss Fuse
 
-<Fuse ESB home>  $ bin/fuseesb
+<JBoss Fuse home>  $ bin/fuse
 
 3) Add this projects features.xml config to Fuse from the Console
    (makes it easier to install bundles with all required dependencies)
 
-FuseESB:karaf@root>  features:addUrl mvn:org.fusesource.examples/rider-auto-common/4.0-SNAPSHOT/xml/features
+JBossFuse:karaf@root>  features:addUrl mvn:org.fusesource.examples/rider-auto-common/4.0-SNAPSHOT/xml/features
 
 4) Install the project.
 
-FuseESB:karaf@root>  features:install rider-auto-osgi
+JBossFuse:karaf@root>  features:install rider-auto-osgi
 
 5) To test the file processing, there are existing files in the
    rider-auto-common module.
 
-<project home> $ cp rider-auto-common/src/data/message1.xml <Fuse ESB home>/target/placeorder
+<project home> $ cp rider-auto-common/src/data/message1.xml <JBoss Fuse home>/target/placeorder
 
    To see what happened look at the log file, either from the console
 
-FuseESB:karaf@root>  log:display
+JBossFuse:karaf@root>  log:display
 
    or from the command line
 
-<Fuse ESB home> $ tail -f data/log/fuseesb.log
+<JBoss Fuse home> $ tail -f data/log/fuseesb.log
 
 6) To test the WS, use your favorite WS tool (e.g. SoapUI) against the following
    WSDL hosted by the rider-auto-ws bundle.
