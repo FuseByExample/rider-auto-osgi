@@ -4,16 +4,16 @@
           
   <camelContext id="rider-auto-backend" trace="false" xmlns="http://camel.apache.org/schema/blueprint">
     <route id="rider-auto-backend-route">
-      <from uri="jms:orders" />
+      <from uri="activemq:orders" />
       <bean ref="backendImpl" />
     </route>
   </camelContext>
 
-  <!-- use CF from ActiveMQ blueprint service running in container -->
-  <reference id="connectionFactory" interface="javax.jms.ConnectionFactory" 
-    filter="(name=localhost)" />
-  <bean id="jms" class="org.apache.activemq.camel.component.ActiveMQComponent">
-    <property name="connectionFactory" ref="connectionFactory" />
-  </bean>
+    <!-- Set username and password to values you set in etc/user.properties -->
+    <bean id="activemq" class="org.apache.activemq.camel.component.ActiveMQComponent" >
+        <property name="brokerURL" value="tcp://localhost:61616"/>
+        <property name="userName" value="smx"/>
+        <property name="password" value="smx"/>
+    </bean>
 
 </blueprint>
