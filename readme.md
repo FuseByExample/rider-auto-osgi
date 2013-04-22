@@ -6,7 +6,7 @@ webinar, please use the code from the rider-auto-osgi-smx-4.4.1-fuse-00-08 tag i
 Example from "Getting Started with Apache Servicemix" webinar
 ========================================================
 
-The Camel routes used in this example ar explained by the following diagram:
+The Camel routes used in this example are explained by the following diagram:
 
 ![EIP Diagram](https://raw.github.com/FuseByExample/rider-auto-osgi/master/doc/EIP_Routes_Diagram.png)
 
