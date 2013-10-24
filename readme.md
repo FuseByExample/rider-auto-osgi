@@ -42,20 +42,24 @@ Build & Run
 
 <project home> $ mvn clean install
 
-2) Start JBoss Fuse
+2) Register a regular user (username 'smx', password 'smx' and role 'admin'). Do this by updating etc/users.properties (from the JBoss Fuse installation) to add the following line: 
+
+    smx=smx,admin
+
+3) Start JBoss Fuse
 
 <JBoss Fuse home>  $ bin/fuse
 
-3) Add this projects features.xml config to Fuse from the Console
+4) Add this projects features.xml config to Fuse from the Console
    (makes it easier to install bundles with all required dependencies)
 
 JBossFuse:karaf@root>  features:addUrl mvn:org.fusesource.examples/rider-auto-common/4.0-SNAPSHOT/xml/features
 
-4) Install the project.
+5) Install the project.
 
 JBossFuse:karaf@root>  features:install rider-auto-osgi
 
-5) To test the file processing, there are existing files in the
+6) To test the file processing, there are existing files in the
    rider-auto-common module.
 
 <project home> $ cp rider-auto-common/src/data/message1.xml <JBoss Fuse home>/target/placeorder
@@ -68,7 +72,7 @@ JBossFuse:karaf@root>  log:display
 
 <JBoss Fuse home> $ tail -f data/log/fuseesb.log
 
-6) To test the WS, use your favorite WS tool (e.g. SoapUI) against the following
+7) To test the WS, use your favorite WS tool (e.g. SoapUI) against the following
    WSDL hosted by the rider-auto-ws bundle.
    * http://localhost:8182/cxf/order?wsdl
 
