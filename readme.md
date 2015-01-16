@@ -17,7 +17,7 @@ Setup
     - configure this location as the environment variable MAVEN_HOME
     - add MAVEN_HOME/bin to your PATH environment variable
 
-- Install JBoss Fuse  6.1.0
+- Install JBoss Fuse  6.2.0
     - Download from https://access.redhat.com/jbossnetwork/ (registration required) and extract
 
 Build & Run
@@ -33,7 +33,7 @@ Build & Run
 
 3) Install the activemq-camel feature
 
-JBossFuse:karaf@root> features:addurl mvn:org.apache.activemq/activemq-karaf/5.9.0.redhat-610311/xml/features
+JBossFuse:karaf@root> features:addurl mvn:org.apache.activemq/activemq-karaf/5.9.0.redhat-611420/xml/features
 JBossFuse:karaf@root> features:install activemq-camel
 
 4) Add this projects features.xml config to Fuse from the Console

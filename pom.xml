@@ -40,12 +40,17 @@
     </modules>
 
     <properties>
-        <activemq-version>5.9.0.redhat-610379</activemq-version>
-        <camel-version>2.12.0.redhat-610379</camel-version>
-        <cxf-version>2.7.0.redhat-610379</cxf-version>
-        <karaf-version>2.3.0.redhat-610379</karaf-version>
-        <smx-features-version>4.5.0.redhat-610379</smx-features-version>
-        <slf4j-api-version>1.6.1</slf4j-api-version>
+        <activemq.version>5.10.0.redhat-620063</activemq.version>
+        <build.helper.maven.plugin>1.9.1</build.helper.maven.plugin>
+        <camel.version>2.14.0.redhat-620058</camel.version>
+        <cxf.version>3.0.2.redhat-620056</cxf.version>
+        <felix.maven.bundle.plugin>2.5.3</felix.maven.bundle.plugin>
+        <karaf.version>2.4.0.redhat-620057</karaf.version>
+        <maven.compiler.plugin.version>3.2</maven.compiler.plugin.version>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+        <smx.features.version>4.5.0.redhat-611420</smx.features.version>
+        <slf4j.api.version>1.7.10</slf4j.api.version>
     </properties>
 
     <dependencyManagement>
@@ -54,35 +59,35 @@
             <dependency>
                 <groupId>org.apache.camel</groupId>
                 <artifactId>camel-core</artifactId>
-                <version>${camel-version}</version>
+                <version>${camel.version}</version>
             </dependency>
 
             <!-- Blueprint container support -->
             <dependency>
                 <groupId>org.apache.camel</groupId>
                 <artifactId>camel-blueprint</artifactId>
-                <version>${camel-version}</version>
+                <version>${camel.version}</version>
             </dependency>
 
             <!-- ActiveMQ connectivity for Camel -->
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-camel</artifactId>
-                <version>${activemq-version}</version>
+                <version>${activemq.version}</version>
             </dependency>
 
             <!-- Add support for JAXB marshaling -->
             <dependency>
                 <groupId>org.apache.camel</groupId>
                 <artifactId>camel-jaxb</artifactId>
-                <version>${camel-version}</version>
+                <version>${camel.version}</version>
             </dependency>
 
             <!-- Add support for CSV marshaling -->
             <dependency>
                 <groupId>org.apache.camel</groupId>
                 <artifactId>camel-bindy</artifactId>
-                <version>${camel-version}</version>
+                <version>${camel.version}</version>
             </dependency>
 
             <dependency>
@@ -95,19 +100,19 @@
             <dependency>
                 <groupId>org.apache.camel</groupId>
                 <artifactId>camel-cxf</artifactId>
-                <version>${camel-version}</version>
+                <version>${camel.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.cxf</groupId>
                 <artifactId>cxf-rt-transports-http-jetty</artifactId>
-                <version>${cxf-version}</version>
+                <version>${cxf.version}</version>
             </dependency>
 
 
             <dependency>
                 <groupId>org.apache.camel.karaf</groupId>
                 <artifactId>apache-camel</artifactId>
-                <version>${camel-version}</version>
+                <version>${camel.version}</version>
                 <classifier>features</classifier>
                 <type>xml</type>
             </dependency>
@@ -115,7 +120,7 @@
             <dependency>
                 <groupId>org.apache.servicemix</groupId>
                 <artifactId>apache-servicemix</artifactId>
-                <version>${smx-features-version}</version>
+                <version>${smx.features.version}</version>
                 <classifier>features</classifier>
                 <type>xml</type>
             </dependency>
@@ -123,7 +128,7 @@
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-karaf</artifactId>
-                <version>${activemq-version}</version>
+                <version>${activemq.version}</version>
                 <classifier>features</classifier>
                 <type>xml</type>
             </dependency>
@@ -131,13 +136,13 @@
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
-                <version>${slf4j-api-version}</version>
+                <version>${slf4j.api.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-log4j12</artifactId>
-                <version>${slf4j-api-version}</version>
+                <version>${slf4j.api.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -148,27 +153,27 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>2.3.2</version>
+                    <version>${maven.compiler.plugin.version}</version>
                     <configuration>
-                        <source>1.6</source>
-                        <target>1.6</target>
+                        <source>${maven.compiler.source}</source>
+                        <target>${maven.compiler.target}</target>
                     </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.camel</groupId>
                     <artifactId>camel-maven-plugin</artifactId>
-                    <version>${camel-version}</version>
+                    <version>${camel.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.felix</groupId>
                     <artifactId>maven-bundle-plugin</artifactId>
                     <extensions>true</extensions>
-                    <version>2.3.5</version>
+                    <version>${felix.maven.bundle.plugin}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>build-helper-maven-plugin</artifactId>
-                    <version>1.7</version>
+                    <version>${build.helper.maven.plugin}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
