@@ -33,7 +33,6 @@ Build & Run
 
 3) Install the activemq-camel feature
 
-JBossFuse:karaf@root> features:addurl mvn:org.apache.activemq/activemq-karaf/5.9.0.redhat-611420/xml/features
 JBossFuse:karaf@root> features:install activemq-camel
 
 4) Add this projects features.xml config to Fuse from the Console
