@@ -40,17 +40,21 @@
     </modules>
 
     <properties>
-        <activemq.version>5.11.0.redhat-620133</activemq.version>
+        <activemq.version>5.11.0.redhat-621025</activemq.version>
+        <camel.version>2.15.1.redhat-621025</camel.version>
+        <cxf.version>3.0.4.redhat-621025</cxf.version>
+        <karaf.version>2.4.0.redhat-621025</karaf.version>
+
         <build.helper.maven.plugin.version>1.9.1</build.helper.maven.plugin.version>
-        <camel.version>2.15.1.redhat-620133</camel.version>
-        <cxf.version>3.0.4.redhat-620133</cxf.version>
         <felix.maven.bundle.plugin.version>2.5.3</felix.maven.bundle.plugin.version>
-        <karaf.version>2.4.0.redhat-620133</karaf.version>
         <maven.compiler.plugin.version>3.2</maven.compiler.plugin.version>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
         <smx.features.version>4.5.0.redhat-611420</smx.features.version>
         <slf4j.version>1.7.10</slf4j.version>
+
+        <fuse-user>admin</fuse-user>
+        <fuse-password>admin</fuse-password>
     </properties>
 
     <dependencyManagement>
