@@ -40,10 +40,10 @@
     </modules>
 
     <properties>
-        <activemq.version>5.11.0.redhat-621083</activemq.version>
-        <camel.version>2.15.1.redhat-621083</camel.version>
-        <cxf.version>3.0.4.redhat-621083</cxf.version>
-        <karaf.version>2.4.0.redhat-621083</karaf.version>
+        <activemq.version>5.11.0.redhat-621084</activemq.version>
+        <camel.version>2.15.1.redhat-621084</camel.version>
+        <cxf.version>3.0.4.redhat-621084</cxf.version>
+        <karaf.version>2.4.0.redhat-621084</karaf.version>
 
         <build.helper.maven.plugin.version>1.9.1</build.helper.maven.plugin.version>
         <felix.maven.bundle.plugin.version>2.5.3</felix.maven.bundle.plugin.version>
