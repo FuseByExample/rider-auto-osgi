@@ -13,7 +13,7 @@
         <when>
           <simple>${header.CamelFileName} regex '^.*(csv|csl)$'</simple>
           <unmarshal>
-            <bindy packages="org.fusesource.camel.model" type="Csv" />
+            <bindy type="Csv" />
           </unmarshal>
           <convertBodyTo type="org.fusesource.camel.model.Order"/>
         </when>
@@ -27,6 +27,6 @@
         <property name="brokerURL" value="tcp://localhost:61616"/>
         <property name="userName" value="admin"/>
         <property name="password" value="admin"/>
-    </bean>
+    </bean>                                                                                     shutdown -
 
 </blueprint>
