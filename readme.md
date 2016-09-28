@@ -17,7 +17,7 @@ Setup
     - configure this location as the environment variable MAVEN_HOME
     - add MAVEN_HOME/bin to your PATH environment variable
 
-- Install JBoss Fuse  6.2.0
+- Install JBoss Fuse  6.3.0
     - Download from https://access.redhat.com/jbossnetwork/ (registration required) and extract
 
 Build & Run
