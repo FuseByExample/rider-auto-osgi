@@ -47,22 +47,17 @@ JBossFuse:karaf@root>  features:addUrl mvn:org.fusesource.examples/rider-auto-co
 6) To test the file processing, there are existing files in the
    rider-auto-common module.
 
-<project home> $ cp rider-auto-common/src/data/message1.xml <JBoss Fuse home>/target/placeorder
+<project home> $ cp rider-auto-common/src/data/message1.xml '<JBoss Fuse home>'/target/placeorder
 
    To see what happened look at the log file, either from the console
 
-JBossFuse:karaf@root>  log:display
+    JBossFuse:karaf@root>  log:display
 
    or from the command line
 
-<JBoss Fuse home> $ tail -f data/log/fuseesb.log
+    '<JBoss Fuse home>' $ tail -f data/log/fuseesb.log
 
 6) To test the WS, use your favorite WS tool (e.g. SoapUI) against the following
    WSDL hosted by the rider-auto-ws bundle.
    * http://localhost:8182/cxf/order?wsdl
 
-Getting Help
-============================
-
-If you hit any problems please let the FuseSource team know on the forums
-  http://fusesource.com/forums/forum.jspa?forumID=2
