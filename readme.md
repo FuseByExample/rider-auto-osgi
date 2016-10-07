@@ -25,15 +25,15 @@ Build & Run
 
 1) Build this project so bundles are deployed into your local maven repo
 
-<project home> $ mvn clean install
+    <project home> $ mvn clean install
 
 2) Start JBoss Fuse
 
-<JBoss Fuse home>  $ bin/fuse
+    <JBoss Fuse home>  $ bin/fuse
 
 3) Install the activemq-camel feature
 
-JBossFuse:karaf@root> features:install activemq-camel
+    JBossFuse:karaf@root> features:install activemq-camel
 
 4) Add this projects features.xml config to Fuse from the Console
    (makes it easier to install bundles with all required dependencies)
@@ -42,7 +42,7 @@ JBossFuse:karaf@root>  features:addUrl mvn:org.fusesource.examples/rider-auto-co
 
 5) Install the project.
 
-JBossFuse:karaf@root>  features:install rider-auto-osgi
+    JBossFuse:karaf@root>  features:install rider-auto-osgi
 
 6) To test the file processing, there are existing files in the
    rider-auto-common module.
