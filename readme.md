@@ -47,7 +47,7 @@ JBossFuse:karaf@root>  features:addUrl mvn:org.fusesource.examples/rider-auto-co
 6) To test the file processing, there are existing files in the
    rider-auto-common module.
 
-<project home> $ cp rider-auto-common/src/data/message1.xml '<JBoss Fuse home>'/target/placeorder
+    '<project home> $' cp rider-auto-common/src/data/message1.xml '<JBoss Fuse home>'/target/placeorder
 
    To see what happened look at the log file, either from the console
 
